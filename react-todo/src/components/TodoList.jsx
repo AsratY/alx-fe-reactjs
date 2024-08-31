@@ -1,73 +1,78 @@
 import React, { useState } from 'react';
-import TodoItem from './TodoItem';
 
-function TodoList() {
-    const [tasks, setTasks] = useState([
-        { id: 1, text: 'Learn React', completed: false },
-        { id: 2, text: 'Learn Testing', completed: false },
-        { id: 3, text: 'Build a Todo App', completed: false },
-    ]);
-    
-    const [text, setText] = useState('');
-    const [error, setError] = useState('');
+const TodoList = () => {
+  const [itemData, setItemData] = useState({ text: '' });
+  const [items, setItems] = useState([
+    { text: 'Learn React', completed: false },
+    { text: 'Build a Todo App', completed: false },
+    { text: 'Write Tests', completed: false }
+  ]);
 
-    function addTask(text) {
-        if (!text.trim()) {
-            setError('Todo cannot be empty');
-            return;
-        }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setItemData({ ...itemData, [name]: value });
+  };
 
-        if (text.length < 3) {
-            setError('Todo must be at least 3 characters long');
-            return;
-        }
-
-        setError('');
-
-        if (tasks.some(task => task.text === text.trim())) {
-            setError('Todo is a duplicate');
-            return;
-        }
-
-        const newTask = {
-            id: Date.now(),
-            text: text.trim(),
-            completed: false,
-        };
-
-        setTasks([...tasks, newTask]);
-        setText('');
+  const handleSubmit = () => {
+    if (itemData.text.trim()) {
+      setItems([...items, { text: itemData.text, completed: false }]);
+      setItemData({ text: '' });
     }
+  };
 
-    function deleteTask(id) {
-        setTasks(tasks.filter(task => task.id !== id));
-    }
-
-    function toggleTask(id) {
-        setTasks(tasks.map(task =>
-            task.id === id ? { ...task, completed: !task.completed } : task
-        ));
-    }
-
-    return (
-        <div data-testid="todo-list">
-            {tasks.map(task => (
-                <TodoItem
-                    key={task.id}
-                    task={task}
-                    deleteTask={deleteTask}
-                    toggleTask={toggleTask}
-                />
-            ))}
-            <input
-                placeholder="Add a new todo"
-                value={text}
-                onChange={e => setText(e.target.value)}
-            />
-            <button onClick={() => addTask(text)}>Add Todo</button>
-            {error && <p data-testid="error-message">{error}</p>}
-        </div>
+  const handleToggle = (indexToToggle) => {
+    setItems(
+      items.map((item, index) =>
+        index === indexToToggle
+          ? { ...item, completed: !item.completed }
+          : item
+      )
     );
-}
+  };
+
+  const handleDelete = (indexToDelete) => {
+    setItems(items.filter((_, index) => index !== indexToDelete));
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        name="text"
+        id="text"
+        value={itemData.text}
+        onChange={handleChange}
+        placeholder="Task"
+      />
+      <button onClick={handleSubmit}>Add</button>
+
+      <ul>
+        {items.map((item, index) => (
+          <li
+            key={index}
+            onClick={() => handleToggle(index)}
+            style={{
+              textDecoration: item.completed ? 'line-through' : 'none',
+              color: item.completed ? 'gray' : 'black',
+              cursor: 'pointer',
+              backgroundColor: item.completed ? '#f0f0f0' : 'transparent',
+            }}
+          >
+            {item.text}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDelete(index);
+              }}
+              style={{ marginLeft: '10px' }}
+            >
+              x
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default TodoList;
