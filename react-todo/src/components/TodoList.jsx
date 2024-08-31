@@ -1,51 +1,73 @@
 import React, { useState } from 'react';
-import AddTodoForm from './AddTodoForm';
+import TodoItem from './TodoItem';
 
 function TodoList() {
-  const [todos, setTodos] = useState([
-    { id: 1, text: 'Learn React in depth', completed: false },
-    { id: 2, text: 'Learn javaScript in depth', completed: false },
-  ]);
-  const [newTodo, setNewTodo] = useState('');
+    const [tasks, setTasks] = useState([
+        { id: 1, text: 'Learn React', completed: false },
+        { id: 2, text: 'Learn Testing', completed: false },
+        { id: 3, text: 'Build a Todo App', completed: false },
+    ]);
+    
+    const [text, setText] = useState('');
+    const [error, setError] = useState('');
 
-  const addTodo = () => {
-    if (newTodo.trim()) {
-      setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
-      setNewTodo('');
+    function addTask(text) {
+        if (!text.trim()) {
+            setError('Todo cannot be empty');
+            return;
+        }
+
+        if (text.length < 3) {
+            setError('Todo must be at least 3 characters long');
+            return;
+        }
+
+        setError('');
+
+        if (tasks.some(task => task.text === text.trim())) {
+            setError('Todo is a duplicate');
+            return;
+        }
+
+        const newTask = {
+            id: Date.now(),
+            text: text.trim(),
+            completed: false,
+        };
+
+        setTasks([...tasks, newTask]);
+        setText('');
     }
-  };
 
-  const toggleTodo = (id) => {
-    setTodos(todos.map(todo =>
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
-    ));
-  };
+    function deleteTask(id) {
+        setTasks(tasks.filter(task => task.id !== id));
+    }
 
-  const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  };
+    function toggleTask(id) {
+        setTasks(tasks.map(task =>
+            task.id === id ? { ...task, completed: !task.completed } : task
+        ));
+    }
 
-  return (
-    <div>
-      <ul>
-        {todos.map(todo => (
-          <li key={todo.id} onClick={() => toggleTodo(todo.id)} style={{ 
-            textDecoration: todo.completed ? 'none' : 'line-through',
-            cursor:'pointer' }}>
-            {todo.text}
-            <button onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id); }}>Delete</button>
-          </li>
-        ))}
-      </ul>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Add a new todo"
-      />
-      <button onClick={addTodo}>Add Todo</button>
-    </div>
-  );
+    return (
+        <div data-testid="todo-list">
+            {tasks.map(task => (
+                <TodoItem
+                    key={task.id}
+                    task={task}
+                    deleteTask={deleteTask}
+                    toggleTask={toggleTask}
+                />
+            ))}
+            <input
+                placeholder="Add a new todo"
+                value={text}
+                onChange={e => setText(e.target.value)}
+            />
+            <button onClick={() => addTask(text)}>Add Todo</button>
+            {error && <p data-testid="error-message">{error}</p>}
+        </div>
+    );
 }
 
 export default TodoList;
