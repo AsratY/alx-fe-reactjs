@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+    "ingredients": [
+      "400g spaghetti",
+      "150g pancetta or guanciale, diced",
+      "2 large eggs",
+      "100g Parmesan cheese, grated",
+      "2 cloves garlic, minced",
+      "Salt and pepper to taste",
+      "Fresh parsley, chopped (for garnish)"
+    ],
+    "instructions": [
+      "Cook the spaghetti in salted boiling water until al dente. Reserve 1 cup of pasta water, then drain.",
+      "In a skillet, cook the pancetta over medium heat until crispy. Add garlic and sauté for 1 minute.",
+      "In a bowl, whisk together eggs and Parmesan cheese. Season with salt and pepper.",
+      "Combine cooked spaghetti with pancetta and garlic in the skillet. Remove from heat.",
+      "Quickly add the egg mixture, stirring to create a creamy sauce. Add reserved pasta water as needed to adjust consistency.",
+      "Serve immediately, garnished with parsley"
+    ],
+    "imageURL": "https://images.unsplash.com/photo-1633337474564-1d9478ca4e2e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3BhZ2hldHRpJTIwQ2FyYm9uYXJhfGVufDB8fDB8fHww"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "A popular Indian curry dish featuring marinated grilled chicken in a creamy tomato sauce.",
+    "ingredients": [
+      "200g yogurt",
+      "2 tablespoons tikka masala spice mix",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "2 cm ginger, grated",
+      "400g crushed tomatoes",
+      "200ml coconut milk",
+      "2 tablespoons oil",
+      "Salt to taste",
+      "Fresh cilantro, for garnish"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and tikka masala for at least 1 hour.",
+      "Heat oil in a pan and sauté onion until translucent. Add garlic and ginger; cook for 2 minutes.",
+      "Add marinated chicken and cook until browned.",
+      "Stir in crushed tomatoes and coconut milk. Simmer for 15-20 minutes.",
+      "Season with salt and garnish with cilantro before serving."
+    ],
+    "imageURL": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hpY2tlbiUyMFRpa2thJTIwTWFzYWxhfGVufDB8fDB8fHww"
+  },
+  {
+    "id": 3,
+    "title": "Sushi Platter",
+    "summary": "An assortment of sushi rolls, nigiri, and sashimi, served with soy sauce and wasabi.",
+    "ingredients": [
+      "2 cups sushi rice",
+      "2 1/2 cups water",
+      "1/4 cup rice vinegar",
+      "1 tablespoon sugar",
+      "1 teaspoon salt",
+      "Assorted fillings (e.g., cucumber, avocado, crab, smoked salmon)",
+      "Nori sheets",
+      "Soy sauce (for serving)"
+    ],
+    "instructions": [
+      "Rinse sushi rice under cold water until water runs clear. Cook rice with water in a rice cooker or pot.",
+      "In a small saucepan, heat vinegar, sugar, and salt until dissolved. Mix with cooked rice.",
+      "Spread rice on a bamboo mat covered with plastic wrap. Place a nori sheet on top.",
+      "Add fillings of choice in a line and roll tightly.",
+      "Slice into pieces and serve with soy sauce."
+    ],
+    "imageURL": "https://plus.unsplash.com/premium_photo-1712949157104-074404157a2e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U3VzaGklMjBQbGF0dGVyfGVufDB8fDB8fHww"
+  },
+  {
+    "id": 4,
+    "title": "Vegetable Stir Fry",
+    "summary": "A colorful mix of vegetables stir-fried with soy sauce, ginger, and garlic.",
+    "ingredients": [
+      "2 cups mixed vegetables (e.g., bell peppers, broccoli, carrots)",
+      "2 tablespoons soy sauce",
+      "1 tablespoon sesame oil",
+      "2 cloves garlic, minced",
+      "1 teaspoon ginger, grated",
+      "Cooked rice or noodles, for serving",
+      "Sesame seeds (for garnish)"
+    ],
+    "instructions": [
+      "Heat sesame oil in a large skillet or wok over medium-high heat.",
+      "Add garlic and ginger; stir-fry for 30 seconds.",
+      "Add mixed vegetables and stir-fry for 5-7 minutes until tender-crisp.",
+      "Pour in soy sauce and stir to combine.",
+      "Serve over rice or noodles, garnished with sesame seeds."
+    ],
+    "imageURL": "https://images.unsplash.com/photo-1543826173-1beeb97525d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8VmVnZXRhYmxlJTIwU3RpciUyMEZyeXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 5,
+    "title": "Beef Tacos",
+    "summary": "Soft tortillas filled with seasoned beef, lettuce, cheese, and salsa.",
+    "ingredients": [
+      "500g ground beef",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "1 tablespoon taco seasoning",
+      "Taco shells"
+    ],
+    "instructions": [
+      "In a skillet, cook onion until soft. Add garlic and cook for 1 minute.",
+      "Add ground beef and taco seasoning. Cook until browned.",
+      "Warm taco shells according to package instructions.",
+      "Fill shells with beef mixture and top with desired toppings."
+    ],
+    "imageURL": "https://plus.unsplash.com/premium_photo-1661730314652-911662c0d86e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmVlZiUyMFRhY29zfGVufDB8fDB8fHww"
+  },
+  {
+    "id": 6,
+    "title": "Chocolate Cake",
+    "summary": "A rich and moist chocolate cake topped with creamy chocolate frosting.",
+    "ingredients": [
+      "1 3/4 cups all-purpose flour",
+      "3/4 cup cocoa powder",
+      "2 cups sugar",
+      "1 1/2 teaspoons baking powder",
+      "1 1/2 teaspoons baking soda",
+      "1 teaspoon salt",
+      "2 large eggs",
+      "1 cup milk",
+      "1/2 cup vegetable oil",
+      "2 teaspoons vanilla extract",
+      "1 cup boiling water"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.",
+      "In a large bowl, mix flour, cocoa powder, sugar, baking powder, baking soda, and salt.",
+      "Add eggs, milk, oil, and vanilla. Beat on medium for 2 minutes. Stir in boiling water (batter will be thin).",
+      "Pour batter into prepared pans and bake for 30-35 minutes.",
+      "Let cakes cool before frosting as desired."
+    ],
+    "imageURL": "https://images.unsplash.com/photo-1586985289906-406988974504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hvY29sYXRlJTIwY2FrZXxlbnwwfHwwfHx8MA%3D%3D"
+  }
+]
